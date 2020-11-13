@@ -69,6 +69,7 @@ func (idb *InDB) CreatePerson(c *gin.Context) {
 
 	idb.DB.Create(&person)
 	result = gin.H{
+		"message" : "User Created",
 		"result": person,
 	}
 
